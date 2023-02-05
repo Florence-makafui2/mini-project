@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - name: Create directories
+      ansible.builtin.file:
+        path: "{{ ''}}"
+        state: directory
+        mode: '775'
+      with_items:
+        - '~/Foo'
+        - '~/Bar'
+        - '~/Baz'
